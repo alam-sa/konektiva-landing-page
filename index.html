@@ -4,68 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konektiva - Koneksi Andal, Inovasi Nyata</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="src/output.css" rel="stylesheet">
+    <link href="src/style.css" rel="stylesheet">
     <!-- Link for the font would go here -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body class="font-roboto">
     <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <!-- Insert logo here -->
-                <img src="src/assets/images/logo.png" alt="Konektiva Logo">
+    <header class="absolute top-0 left-0 w-full h-[120px] z-50 flex items-center justify-center text-white">
+        <div class="container flex justify-between items-center h-full">
+            <div class="flex items-center">
+                <img src="src/assets/images/logo.png" alt="Konektiva Logo" class="h-7">
             </div>
             <nav>
-                <!-- Login button -->
-                <button>Login</button>
+                <button class="hidden md:block bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-full border border-primary hover:border-primary-dark transition-all duration-300 font-medium text-base">
+                    Login
+                </button>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Koneksi Andal,<br>Inovasi Nyata<br>Bersama Konektiva</h1>
-            <p>Kami menghadirkan lebih dari sekadar koneksi, kami<br>bantu Anda tumbuh melalui teknologi yang tepat.</p>
-            <button>Hubungi Kami <span class="arrow-icon">⟶</span></button>
+    <section class="relative min-h-screen flex items-center justify-center text-white text-center py-32 bg-[url('/src/assets/images/hero-bg.png')] bg-cover bg-center">
+        <div class="container relative z-10">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 text-center text-white leading-normal max-w-4xl mx-auto">Koneksi Andal, Inovasi Nyata Bersama Konektiva</h1>
+            <p class="text-2xl mb-12 max-w-3xl mx-auto">Kami menghadirkan lebih dari sekadar koneksi, kami bantu Anda tumbuh melalui teknologi yang tepat.</p>
+            <button class="text-white px-1 py-1 rounded-[100px] flex items-center gap-3 mx-auto shadow-lg transition-all duration-300 border border-white/30 bg-white/20 backdrop-blur-sm hover:bg-white/30 hover:border-white/50 group">
+                <span class="ml-6">Hubungi Kami</span>
+                <span class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white group-hover:scale-110 transform transition-transform duration-300 ease-in-out">
+                    <i class="fas fa-arrow-right"></i>
+                </span>
+            </button>
         </div>
     </section>
 
     <!-- About Us Section -->
-    <section class="about-us">
+    <section class="py-20 text-text-primary">
         <div class="container">
-            <h2>Tentang Kami</h2>
-            <div class="heading-content">
-                <h3>Kualitas, Kecepatan, dan<br>Kepercayaan – Bersama<br>Konektiva.</h3>
-                <p>Konektiva hadir sebagai mitra teknologi terpercaya, menyediakan<br>layanan internet berkualitas tinggi dan solusi produk IT terintegrasi<br>untuk mendorong transformasi digital dan kemajuan teknologi di<br>Indonesia.</p>
+            <h2 class="text-base font-bold uppercase mb-4 flex items-center gap-3 w-fit font-bold">
+                <span class="w-4 h-4 bg-primary rounded-full"></span>
+                Tentang Kami
+            </h2>
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-16 mb-20">
+                <h3 class="lg:w-2/5 text-4xl font-semibold leading-tight">Kualitas, Kecepatan, dan Kepercayaan Bersama Konektiva.</h3>
+                <p class="lg:w-3/5 text-text-secondary text-2xl leading-relaxed">Konektiva hadir sebagai mitra teknologi terpercaya, menyediakan layanan internet berkualitas tinggi dan solusi produk IT terintegrasi untuk mendorong transformasi digital dan kemajuan teknologi di Indonesia.</p>
             </div>
-            <div class="cards">
-                <div class="card high-integrity">
-                    <h4>High Integrity</h4>
-                    <p>Kami berkomitmen pada integritas tinggi, dengan menjunjung transparansi di setiap langkah untuk membangun kepercayaan penuh dari setiap klien.</p>
-                </div>
-                <div class="column-2">
-                    <div class="card team-work">
-                        <h4>Team Work</h4>
-                        <p>Sinergi tim yang kuat menghasilkan solusi terbaik untuk klien kami.</p>
-                    </div>
-                    <div class="card fearless">
-                        <h4>Fearless</h4>
-                        <p>Kami menghadapi tantangan dengan inovasi untuk mewujudkan keberhasilan Anda.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 h-auto md:h-[600px]">
+                <div class="card bg-[url('/src/assets/images/high-integrity.png')] bg-cover bg-center rounded-[20px] p-8 text-white relative overflow-hidden md:col-span-1 md:row-span-2 h-[300px] md:h-full">
+                    <div class="relative z-10">
+                        <h4 class="text-2xl font-medium mb-3">High Integrity</h4>
+                        <p class="text-base leading-relaxed">Kami berkomitmen pada integritas tinggi, dengan menjunjung transparansi di setiap langkah untuk membangun kepercayaan penuh dari setiap klien.</p>
                     </div>
                 </div>
-                <div class="column-3">
-                    <div class="card excellent-service">
-                        <h4>Excellent Service</h4>
-                        <p>Kami berkomitmen memberikan layanan terbaik, dengan dedikasi penuh untuk memastikan kepuasan dan kenyamanan setiap klien.</p>
+                <div class="flex flex-col gap-5 md:col-span-1 md:row-span-2">
+                    <div class="card bg-[url('/src/assets/images/team-work.png')] bg-cover bg-center rounded-[20px] p-8 text-white relative overflow-hidden h-[300px] md:h-[60%]">
+                        <div class="relative z-10 flex flex-col justify-end h-full">
+                            <h4 class="text-2xl font-medium mb-3">Team Work</h4>
+                            <p class="text-base leading-relaxed">Sinergi tim yang kuat menghasilkan solusi terbaik untuk klien kami.</p>
+                        </div>
                     </div>
-                    <div class="card smart-working">
-                        <h4>Smart Working</h4>
-                        <p>Solusi inovatif dan efisien melalui pendekatan kerja yang cerdas dan terarah.</p>
+                    <div class="card bg-[url('/src/assets/images/fearless.png')] bg-cover bg-center rounded-[20px] p-8 text-white relative overflow-hidden h-[300px] md:h-[40%]">
+                        <div class="relative z-10">
+                            <h4 class="text-2xl font-medium mb-3">Fearless</h4>
+                            <p class="text-base leading-relaxed">Kami menghadapi tantangan dengan inovasi untuk mewujudkan keberhasilan Anda.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-5 md:col-span-1 md:row-span-2">
+                    <div class="card bg-[url('/src/assets/images/excellent-service.png')] bg-cover bg-center rounded-[20px] p-8 text-white relative overflow-hidden h-[300px] md:h-[55%]">
+                        <div class="relative z-10">
+                            <h4 class="text-2xl font-medium mb-3">Excellent Service</h4>
+                            <p class="text-base leading-relaxed">Kami berkomitmen memberikan layanan terbaik, dengan dedikasi penuh untuk memastikan kepuasan dan kenyamanan setiap klien.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-[url('/src/assets/images/smart-working.png')] bg-cover bg-top rounded-[20px] p-8 text-white relative overflow-hidden h-[300px] md:h-[45%]">
+                        <div class="relative z-10 flex flex-col justify-end h-full">
+                            <h4 class="text-2xl font-medium mb-3">Smart Working</h4>
+                            <p class="text-base leading-relaxed">Solusi inovatif dan efisien melalui pendekatan kerja yang cerdas dan terarah.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,139 +92,234 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services">
+    <section class="py-20 bg-gray-50">
         <div class="container">
-            <h2>Layanan Kami</h2>
-            <h3>Solusi Digital Terpercaya.</h3>
-            <p>Konektiva hadir untuk memberikan solusi layanan Internet dan Produk IT Digital<br>untuk menunjang kemajuan teknologi dan Informasi di Indonesia</p>
+            <h2 class="text-base font-bold uppercase mb-4 flex items-center gap-3 w-fit mx-auto">
+                <span class="w-4 h-4 bg-primary rounded-full"></span>
+                Layanan Kami
+            </h2>
+            <h3 class="text-4xl font-semibold mb-4 text-center">Solusi Digital Terpercaya.</h3>
+            <p class="text-text-secondary text-base mb-12 text-center">Konektiva hadir untuk memberikan solusi layanan Internet dan Produk IT Digital<br>untuk menunjang kemajuan teknologi dan Informasi di Indonesia</p>
             
-            <div class="service-items">
-                <div class="service-item">
-                    <!-- Icon -->
-                    <img src="src/assets/icons/network.svg" alt="Internet Connection">
-                    <h4>Internet Connection</h4>
-                    <p>Rasakan pengalaman internet terbaik dengan kecepatan tinggi dan koneksi stabil melalui layanan unggulan kami.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="src/assets/icons/network.svg" alt="Internet Connection" class="w-12 md:w-16 h-12 md:h-16 mb-4 md:mb-6">
+                    <h4 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Internet Connection</h4>
+                    <p class="text-text-secondary text-sm md:text-base">Rasakan pengalaman internet terbaik dengan kecepatan tinggi dan koneksi stabil melalui layanan unggulan kami.</p>
                 </div>
-                <div class="service-item">
-                     <!-- Icon -->
-                    <img src="src/assets/icons/services.svg" alt="Manage Service">
-                    <h4>Manage Service</h4>
-                    <p>Optimalkan operasional bisnis Anda dengan layanan managed service yang andal dan tepercaya dari Konektiva.</p>
+                <div class="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="src/assets/icons/services.svg" alt="Manage Service" class="w-12 md:w-16 h-12 md:h-16 mb-4 md:mb-6">
+                    <h4 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Manage Service</h4>
+                    <p class="text-text-secondary text-sm md:text-base">Optimalkan operasional bisnis Anda dengan layanan managed service yang andal dan tepercaya dari Konektiva.</p>
                 </div>
-                <div class="service-item">
-                     <!-- Icon -->
-                    <img src="src/assets/icons/consultation.svg" alt="IT Consultant">
-                    <h4>IT Consultant</h4>
-                    <p>Dapatkan solusi IT terbaik melalui layanan konsultasi profesional dari tim ahli kami.</p>
+                <div class="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="src/assets/icons/consultation.svg" alt="IT Consultant" class="w-12 md:w-16 h-12 md:h-16 mb-4 md:mb-6">
+                    <h4 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">IT Consultant</h4>
+                    <p class="text-text-secondary text-sm md:text-base">Dapatkan solusi IT terbaik melalui layanan konsultasi profesional dari tim ahli kami.</p>
                 </div>
-                <div class="service-item">
-                     <!-- Icon -->
-                    <img src="src/assets/icons/vector.svg" alt="Design Graphic">
-                    <h4>Design Graphic</h4>
-                    <p>Desain grafis profesional untuk mendukung ide dan identitas visual Anda</p>
+                <div class="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="src/assets/icons/vector.svg" alt="Design Graphic" class="w-12 md:w-16 h-12 md:h-16 mb-4 md:mb-6">
+                    <h4 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Design Graphic</h4>
+                    <p class="text-text-secondary text-sm md:text-base">Desain grafis profesional untuk mendukung ide dan identitas visual Anda</p>
                 </div>
-                <div class="service-item">
-                     <!-- Icon -->
-                    <img src="src/assets/icons/domain.svg" alt="Web Development">
-                    <h4>Web Developement</h4>
-                    <p>Dapatkan website profesional yang responsif, menarik, dan siap mendukung kebutuhan digital bisnis Anda</p>
+                <div class="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="src/assets/icons/domain.svg" alt="Web Development" class="w-12 md:w-16 h-12 md:h-16 mb-4 md:mb-6">
+                    <h4 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Web Developement</h4>
+                    <p class="text-text-secondary text-sm md:text-base">Dapatkan website profesional yang responsif, menarik, dan siap mendukung kebutuhan digital bisnis Anda</p>
                 </div>
-                <div class="service-item">
-                     <!-- Icon -->
-                    <img src="src/assets/icons/mobile-apps.svg" alt="Mobile Development">
-                    <h4>Mobile Developement</h4>
-                    <p>Dapatkan aplikasi mobile inovatif dan user-friendly melalui layanan pengembangan mobile terbaik dari kami.</p>
+                <div class="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="src/assets/icons/mobile-apps.svg" alt="Mobile Development" class="w-12 md:w-16 h-12 md:h-16 mb-4 md:mb-6">
+                    <h4 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Mobile Developement</h4>
+                    <p class="text-text-secondary text-sm md:text-base">Dapatkan aplikasi mobile inovatif dan user-friendly melalui layanan pengembangan mobile terbaik dari kami.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Products Section -->
-    <section class="products">
+    <section class="py-20 bg-[url('/src/assets/images/product-background.png')] bg-cover bg-center text-white">
         <div class="container">
-            <div class="products-header">
-                <h2>Produk Kami</h2>
-                <h3>Produk IT untuk Semua<br>Kebutuhan Digital Anda.</h3>
+            <h2 class="text-base font-bold uppercase mb-4 flex items-center gap-3 w-fit mx-auto md:mx-0">
+                <span class="w-4 h-4 bg-primary rounded-full"></span>
+                Produk Kami
+            </h2>
+            <div class="flex flex-col lg:flex-row justify-between items-end gap-8 md:gap-12 lg:gap-16 mb-8 md:mb-12 lg:mb-16">
+                <h3 class="w-full lg:w-1/2 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight whitespace-pre-line text-center lg:text-left">Produk IT untuk Semua
+Kebutuhan Digital Anda.</h3>
+                <span class="w-full lg:w-1/2 block w-20 h-0.5 bg-gray-400 mx-auto lg:mx-0"></span>
             </div>
-            <div class="product-items">
-                <div class="product-item">
-                    <h4>01.</h4>
-                    <h4>Dedicated Premium</h4>
-                    <ul>
-                        <li>Internet stabil 1:1</li>
-                        <li>Layanan prioritas 24/7</li>
-                        <li>Jaminan SLA 99.8%</li>
-                        <li>Support perangkat sesuai kebutuhan bisnis anda</li>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
+                <div class="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-[20px] shadow-lg">
+                    <h4 class="text-xl md:text-2xl font-semibold mb-2">01.</h4>
+                    <h4 class="text-xl md:text-2xl font-semibold mb-4 md:mb-6">Dedicated Premium</h4>
+                    <ul class="space-y-3 md:space-y-4 text-white/80 text-sm md:text-base">
+                        <li class="flex items-start gap-2">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full mt-2 shrink-0"></span>
+                            <span>Internet stabil 1:1</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full mt-2 shrink-0"></span>
+                            <span>Layanan prioritas 24/7</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full mt-2 shrink-0"></span>
+                            <span>Jaminan SLA 99.8%</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full mt-2 "></span>
+                            <span>Support perangkat sesuai kebutuhan bisnis anda</span>
+                        </li>
                     </ul>
                 </div>
-                <div class="product-item">
-                    <h4>02.</h4>
-                    <h4>Manage Service</h4>
-                    <ul>
-                        <li>Memberikan pelayanan manage service terhadap infrastruktur internet anda</li>
-                        <li>Support pelayanan 24/7</li>
-                        <li>Biaya Terjangkau</li>
+                <div class="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-[20px] shadow-lg">
+                    <h4 class="text-xl md:text-2xl font-semibold mb-2">02.</h4>
+                    <h4 class="text-xl md:text-2xl font-semibold mb-4 md:mb-6">Manage Service</h4>
+                    <ul class="space-y-3 md:space-y-4 text-white/80 text-sm md:text-base">
+                        <li class="flex items-start gap-2">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full mt-2 "></span>
+                            <span>Memberikan pelayanan manage service terhadap infrastruktur internet anda</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full mt-2 "></span>
+                            <span>Support pelayanan 24/7</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full mt-2 "></span>
+                            <span>Biaya Terjangkau</span>
+                        </li>
                     </ul>
                 </div>
-                <div class="product-item">
-                    <h4>03.</h4>
-                    <h4>IT Consultant</h4>
-                    <ul>
-                        <li>Didukung oleh tim berpengalaman dibidang IT</li>
-                        <li>Konektiva mampu mengidentifikasi dan menyelesaikan permasalahan kompleks</li>
-                        <li>Rekomendasi tentang infrastruktur dan masalah IT anda.</li>
+                <div class="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-[20px] shadow-lg">
+                    <h4 class="text-xl md:text-2xl font-semibold mb-2">03.</h4>
+                    <h4 class="text-xl md:text-2xl font-semibold mb-4 md:mb-6">IT Consultant</h4>
+                    <ul class="space-y-3 md:space-y-4 text-white/80 text-sm md:text-base">
+                        <li class="flex items-start gap-2">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full mt-2 "></span>
+                            <span>Didukung oleh tim berpengalaman dibidang IT</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full mt-2 "></span>
+                            <span>Konektiva mampu mengidentifikasi dan menyelesaikan permasalahan kompleks</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full mt-2 "></span>
+                            <span>Rekomendasi tentang infrastruktur dan masalah IT anda.</span>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="products-cta">
-                <div class="products-subtitle-wrapper">
-                    <div class="rounded-images">
-                        <img src="src/assets/images/man.jpg" alt="Avatar 1">
-                        <img src="src/assets/images/man.jpg" alt="Avatar 2">
-                        <img src="src/assets/images/man.jpg" alt="Avatar 3">
-                        <img src="src/assets/images/man.jpg" alt="Avatar 4">
+            <div class="flex flex-col md:flex-row items-center justify-between bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-[20px] gap-6 md:gap-8">
+                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+                    <div class="flex -space-x-4">
+                        <img src="src/assets/images/man.jpg" alt="Avatar 1" class="w-10 md:w-12 h-10 md:h-12 rounded-full border-2 border-white">
+                        <img src="src/assets/images/man.jpg" alt="Avatar 2" class="w-10 md:w-12 h-10 md:h-12 rounded-full border-2 border-white">
+                        <img src="src/assets/images/man.jpg" alt="Avatar 3" class="w-10 md:w-12 h-10 md:h-12 rounded-full border-2 border-white">
+                        <img src="src/assets/images/man.jpg" alt="Avatar 4" class="w-10 md:w-12 h-10 md:h-12 rounded-full border-2 border-white">
                     </div>
-                    <p class="products-subtitle">Bersama Konektiva, wujudkan solusi teknologi terbaik untuk bisnis Anda.</p>
+                    <p class="text-lg md:text-xl text-white/80 text-center md:text-left">Bersama Konektiva, wujudkan solusi teknologi terbaik untuk bisnis Anda.</p>
                 </div>
-                <button>Hubungi Kami Sekarang <span class="arrow-icon">⟶</span></button>
+                <button class="group bg-primary hover:bg-primary-dark text-white px-1 py-1 rounded-full flex items-center gap-3 shadow-lg transition-all duration-300 w-full md:w-auto justify-center">
+                    <span class="ml-6">Hubungi Kami Sekarang</span>
+                    <span class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary font-black group-hover:scale-110 transform transition-transform duration-300 ease-in-out">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </button>
             </div>
         </div>
     </section>
 
+    <!-- Clients Section -->
+<section class="py-20 bg-white">
+    <div class="container">
+        <h2 class="text-base font-bold uppercase mb-4 flex items-center gap-3 w-fit mx-auto">
+            <span class="w-4 h-4 bg-primary rounded-full"></span>
+            Klien Kami
+        </h2>
+        <h3 class="text-2xl font-medium mb-20 text-center">Dipercaya oleh berbagai klien dari berbagai industri untuk solusi internet dan IT terbaik</h3>
+  
+      <!-- First Row - 5 Logos -->
+      <div class="flex flex-wrap justify-center items-center gap-16 mb-20">
+        <div class="w-[calc(20%-32px)] min-w-[180px] flex justify-center">
+            <img src="src/assets/images/client-1.png" alt="Client 1" 
+                 class="w-[246px] h-[89px] object-contain">
+        </div>
+        <div class="w-[calc(20%-32px)] min-w-[180px] flex justify-center">
+            <img src="src/assets/images/client-2.png" alt="Client 2" 
+                 class="w-[246px] h-[89px] object-contain">
+        </div>
+        <div class="w-[calc(20%-32px)] min-w-[180px] flex justify-center">
+            <img src="src/assets/images/client-3.png" alt="Client 3" 
+                 class="w-[246px] h-[89px] object-contain">
+        </div>
+        <div class="w-[calc(20%-32px)] min-w-[180px] flex justify-center">
+            <img src="src/assets/images/client-4.png" alt="Client 4" 
+                 class="w-[246px] h-[89px] object-contain">
+        </div>
+        <div class="w-[calc(5%-32px)] flex justify-center">
+            <img src="src/assets/images/client-5.png" alt="Client 5" 
+                 class="w-[89px] h-[89px] object-contain">
+        </div>
+      </div>
+      
+      <!-- Second Row - 4 Logos -->
+      <div class="flex flex-wrap justify-center items-center gap-16">
+        <div class="w-[calc(25%-32px)] min-w-[180px] flex justify-center">
+            <img src="src/assets/images/client-6.png" alt="Client 6" 
+                 class="w-[246px] h-[89px] object-contain">
+        </div>
+        <div class="w-[calc(25%-32px)] min-w-[180px] flex justify-center">
+            <img src="src/assets/images/client-7.png" alt="Client 7" 
+                 class="w-[246px] h-[89px] object-contain">
+        </div>
+        <div class="w-[calc(5%-32px)] flex justify-center">
+            <img src="src/assets/images/client-8.png" alt="Client 8" 
+                class="w-[89px] h-[89px] object-contain">
+        </div>
+        <div class="w-[calc(25%-32px)] min-w-[180px] flex justify-center">
+            <img src="src/assets/images/client-9.png" alt="Client 9" 
+            class="w-[246px] h-[89px] object-contain">
+        </div>
+      </div>
+    </div>
+  </section>  
     <!-- Contact Section -->
-    <section class="contact">
+    <section class="py-20 bg-gray-50">
         <div class="container">
-            <h2>Kontak Kami</h2>
-            <div class="contact-wrapper">
-                <div class="contact-left">
-                    <h3>Penuhi kebutuhan internet cepat di<br>anda bersama kami.</h3>
-                    <div class="contact-form">
-                        <label for="name">Nama Lengkap</label>
-                        <input type="text" id="name" placeholder="Nama Anda">
-
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="you@company.com">
-
-                        <label for="phone">Phone number</label>
-                        <input type="tel" id="phone" placeholder="+62 123456789">
-
-                        <label for="message">Message</label>
-                        <textarea id="message"></textarea>
-
-                        <div class="privacy">
-                            <input type="checkbox" id="privacy">
-                            <label for="privacy">You agree to our friendly privacy policy</label>
+            <h2 class="text-base font-bold uppercase mb-4 flex items-center gap-3 w-fit mx-auto md:mx-0">
+                <span class="w-4 h-4 bg-primary rounded-full"></span>
+                Kontak Kami
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-semibold mb-6 md:mb-8">Penuhi kebutuhan internet cepat di<br>anda bersama kami.</h3>
+                    <form class="space-y-4 md:space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-text-secondary mb-2">Nama Lengkap</label>
+                            <input type="text" id="name" placeholder="Nama Anda" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base">
                         </div>
-
-                        <button>Send message</button>
-                    </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-text-secondary mb-2">Email</label>
+                            <input type="email" id="email" placeholder="you@company.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-text-secondary mb-2">Phone number</label>
+                            <input type="tel" id="phone" placeholder="+62 123456789" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-text-secondary mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base"></textarea>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" id="privacy" class="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded">
+                            <label for="privacy" class="text-sm text-text-secondary">You agree to our friendly privacy policy</label>
+                        </div>
+                        <button class="bg-primary hover:bg-primary-dark text-white px-6 md:px-8 py-3 md:py-4 rounded-full transition-all duration-300 text-sm md:text-base w-full md:w-auto">Send message</button>
+                    </form>
                 </div>
-                <div class="contact-map">
-                    <!-- Google Maps Embed -->
+                <div class="rounded-[20px] overflow-hidden shadow-lg h-[300px] md:h-[450px]">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4732.569168150111!2d117.117141!3d-0.44867899999999994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df6795bb6212f49%3A0xeea6b90092ca0ff5!2sSekumpul%20Hills!5e1!3m2!1sid!2sid!4v1748901733189!5m2!1sid!2sid&zoom=16&maptype=roadmap" 
-                        width="100%" 
-                        height="450" 
+                        class="w-full h-full"
                         style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy" 
@@ -216,35 +330,72 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-info">
-                <div class="footer-logo">
-                    <!-- Insert logo here -->
-                    <img src="src/assets/images/logo.png" alt="Konektiva Logo">
-                </div>
-                <p>Konektiva adalah penyedia layanan internet dan solusi IT terintegrasi yang berfokus pada konektivitas andal, inovasi digital dan layanan profesional untuk mendukung transformasi teknologi di Indonesia</p>
+    <!-- Footer -->        
+    <section class="py-20 bg-[url('/src/assets/images/product-background.png')] bg-cover bg-center text-white">
+        <div class="container mx-auto px-5 max-w-6xl">
+          <!-- Logo -->
+          <img src="src/assets/images/logo.png" alt="Konektiva Logo" class="h-10 mb-12">
+      
+          <!-- Main content container with increased bottom margin -->
+          <div class="flex flex-col lg:flex-row gap-16 mb-20">  <!-- Added mb-20 here -->
+            <!-- Left Column - Paragraph -->
+            <div class="lg:w-2/5">
+              <p class="text-white text-base font-normal leading-6">
+                Konektiva adalah penyedia layanan internet dan solusi IT terintegrasi yang berfokus pada konektivitas andal, inovasi digital, dan layanan profesional untuk mendukung transformasi teknologi di Indonesia.
+              </p>
             </div>
-            <div class="footer-contact">
-                <div class="location">
-                    <i class="fas fa-location-dot"></i>
-                    <p>ALAMAT<br>Kompleks Sekumpul Hill, Unit 03 JL P. Suryanata RT 14-15 Kel. Bukit pinang kec. Samarinda Ulu 75131</p>
+      
+            <!-- Right Column - Contact Info -->
+            <div class="lg:w-3/5">
+              <div class="flex flex-col md:flex-row justify-between">
+                <!-- Address -->
+                <div class="flex-1">
+                  <div class="flex gap-4 items-start">
+                    <i class="fas fa-location-dot text-primary text-xl mt-1"></i>
+                    <div>
+                      <p class="text-gray-konektiva font-medium text-sm uppercase tracking-wider mb-2">ALAMAT</p>
+                      <p class="text-white text-base font-normal leading-6">
+                        Kompleks Sekumpul Hill, Unit 03<br>
+                        Jl. P. Suryanata RT 14-15 Kel. Bukit Pinang<br>
+                        Kec. Samarinda Ulu, 75131
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div class="email">
-                    <i class="fas fa-envelope"></i>
-                    <p>EMAIL<br>support@kaltimnet.com</p>
+      
+                <!-- Contact Details -->
+                <div class="flex-1">
+                  <!-- Email -->
+                  <div class="flex gap-4 items-start mb-8">
+                    <i class="fas fa-envelope text-primary text-xl mt-1"></i>
+                    <div>
+                      <p class="text-gray-konektiva font-medium text-sm uppercase tracking-wider mb-1">E-MAIL</p>
+                      <p class="text-white text-base font-normal leading-6">support@kaltimnet.com</p>
+                    </div>
+                  </div>
+      
+                  <!-- Phone -->
+                  <div class="flex gap-4 items-start">
+                    <i class="fas fa-phone text-primary text-xl mt-1"></i>
+                    <div>
+                      <p class="text-gray-konektiva font-medium text-sm uppercase tracking-wider mb-1">PHONE NUMBER</p>
+                      <p class="text-white text-base font-normal leading-6">+6285157157760</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="phone">
-                    <i class="fas fa-phone"></i>
-                    <p>PHONE NUMBER<br>+6285157157760</p>
-                </div>
+              </div>
             </div>
+          </div>
+      
+          <!-- Footer Bottom -->
+          <div class="border-t border-gray-700 pt-8">
+            <div class="flex flex-row sm:flex-row justify-between items-center mt-2">
+              <p class="text-gray-400 text-sm">PT Kalim Net Nusantara</p>
+              <p class="text-gray-400 text-xs sm:mt-0">© 2025 konektiva. All Rights Reserved</p>
+            </div>
+          </div>
         </div>
-        <div class="copyright">
-            <p>©2025 konektiva. All Rights Reserved</p>
-        </div>
-    </footer>
-
+      </section>
+      
 </body>
 </html>

@@ -1,0 +1,6 @@
+.footer-background {
+    background-image: url('/src/assets/images/footer-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

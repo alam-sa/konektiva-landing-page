@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles can be added here */
+@layer components {
+  .container {
+    @apply max-w-[1440px] mx-auto px-5;
+  }
+} 
