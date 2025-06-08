@@ -11,6 +11,9 @@ export default {
         'primary-dark': '#2bb8b8',
         'text-primary': '#000000',
         'text-secondary': '#586068',
+        gray: {
+          konektiva: '#D7DDE9',
+        },
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
