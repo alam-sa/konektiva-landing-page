@@ -19,6 +19,18 @@ export default {
         'poppins': ['Poppins', 'sans-serif'],
         'roboto': ['Roboto', 'sans-serif'],
       },
+      fontSize: {
+        'hero-sm': ['30px', '1.5'], // 1.5 is line height
+      },
+      letterSpacing: {
+        'hero-sm': '-0.42px',
+      },
+      fontWeight: {
+        'hero-sm': 700,
+      },
+      lineHeight: {
+        'hero-sm': 1.5,
+      },
       container: {
         center: true,
         padding: '1rem',
