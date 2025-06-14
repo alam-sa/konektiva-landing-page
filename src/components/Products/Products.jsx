@@ -105,10 +105,10 @@ const Products = () => {
             <div className="w-full md:w-auto">
               <button 
                 onClick={handleWhatsAppClick}
-                className="group bg-primary hover:bg-primary-dark text-white px-1 py-1 rounded-[100px] flex items-center gap-2 w-auto mx-auto md:mx-0 justify-between md:justify-center shadow-lg transition-all duration-300 cursor-pointer text-sm sm:text-base"
+                className="text-white px-1 py-1 rounded-[100px] flex items-center gap-3 mx-auto shadow-lg transition-all duration-300 border border-primary bg-primary hover:bg-primary-dark backdrop-blur-sm group cursor-pointer"
               >
-                <span className="ml-3 sm:ml-4 md:ml-6 whitespace-nowrap">Hubungi Kami</span>
-                <span className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-white rounded-full flex-shrink-0 flex items-center justify-center text-primary group-hover:scale-110 transform transition-transform duration-300 ease-in-out mr-1 md:mr-0">
+                <span className="ml-3 sm:ml-4 md:ml-6 whitespace-nowrap">Hubungi Kami Sekarang</span>
+                <span className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary group-hover:scale-110 transform transition-transform duration-300 ease-in-out">
                   <FontAwesomeIcon icon={faArrowRight} className="text-xs sm:text-sm md:text-base" />
                 </span>
               </button>
