@@ -3,6 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const Products = () => {
+  const handleWhatsAppClick = () => {
+    window.location.href = 'https://api.whatsapp.com/send/?phone=6285157157760&text=Halo+Konektiva&type=phone_number&app_absent=0';
+  };
   return (
     <section className="py-20 bg-[url('/src/assets/images/product-background.png')] bg-cover bg-center text-white" id="produk">
       <div className="container">
@@ -97,7 +100,10 @@ const Products = () => {
               Bersama Konektiva, wujudkan solusi teknologi terbaik untuk bisnis Anda.
             </p>
           </div>
-          <button className="group bg-primary hover:bg-primary-dark text-white px-1 py-1 rounded-full flex items-center gap-3 shadow-lg transition-all duration-300 w-full md:w-auto justify-center">
+          <button 
+            onClick={handleWhatsAppClick}
+            className="group bg-primary hover:bg-primary-dark text-white px-1 py-1 rounded-full flex items-center gap-3 shadow-lg transition-all duration-300 w-full md:w-auto justify-center cursor-pointer"
+          >
             <span className="ml-6">Hubungi Kami Sekarang</span>
             <span className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary font-black group-hover:scale-110 transform transition-transform duration-300 ease-in-out">
               <FontAwesomeIcon icon={faArrowRight} />
