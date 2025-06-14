@@ -1,13 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import logo from '../../assets/images/logo.png';
 
 const Footer = () => {
   return (
     <footer className="py-20 bg-[url('/src/assets/images/product-background.png')] bg-cover bg-center text-white">
       <div className="container mx-auto px-5 max-w-6xl">
         {/* Logo */}
-        <img src="/src/assets/images/logo.png" alt="Konektiva Logo" className="h-10 mb-12" />
+        <img src={logo} alt="Konektiva Logo" className="h-10 mb-12" />
     
         {/* Main content container */}
         <div className="flex flex-col lg:flex-row gap-16 mb-20">

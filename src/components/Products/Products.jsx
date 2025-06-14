@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import avatar1 from '../../assets/images/man.jpg';
 
 const Products = () => {
   const handleWhatsAppClick = () => {
@@ -91,10 +92,10 @@ const Products = () => {
         <div className="flex flex-col md:flex-row items-center justify-between bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-[20px] gap-6 md:gap-8">
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
             <div className="flex -space-x-4">
-              <img src="/src/assets/images/man.jpg" alt="Avatar 1" className="w-10 md:w-12 h-10 md:h-12 rounded-full border-2 border-white" />
-              <img src="/src/assets/images/man.jpg" alt="Avatar 2" className="w-10 md:w-12 h-10 md:h-12 rounded-full border-2 border-white" />
-              <img src="/src/assets/images/man.jpg" alt="Avatar 3" className="w-10 md:w-12 h-10 md:h-12 rounded-full border-2 border-white" />
-              <img src="/src/assets/images/man.jpg" alt="Avatar 4" className="w-10 md:w-12 h-10 md:h-12 rounded-full border-2 border-white" />
+              <img src={avatar1} alt="Avatar 1" className="w-10 md:w-12 h-10 md:h-12 rounded-full border-2 border-white" />
+              <img src={avatar1} alt="Avatar 2" className="w-10 md:w-12 h-10 md:h-12 rounded-full border-2 border-white" />
+              <img src={avatar1} alt="Avatar 3" className="w-10 md:w-12 h-10 md:h-12 rounded-full border-2 border-white" />
+              <img src={avatar1} alt="Avatar 4" className="w-10 md:w-12 h-10 md:h-12 rounded-full border-2 border-white" />
             </div>
             <p className="text-lg md:text-xl text-white/80 text-center md:text-left">
               Bersama Konektiva, wujudkan solusi teknologi terbaik untuk bisnis Anda.

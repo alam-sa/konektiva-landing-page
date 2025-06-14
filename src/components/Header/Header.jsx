@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import logo from '../../assets/images/logo.png';
 
 const Header = () => {
   const handleLoginClick = () => {
@@ -11,7 +12,7 @@ const Header = () => {
       <div className="container h-full">
         <div className="flex justify-between items-center h-full">
           <div className="flex items-center justify-center md:justify-start w-full md:w-auto">
-            <img src="/src/assets/images/logo.png" alt="Konektiva Logo" className="h-7" />
+            <img src={logo} alt="Konektiva Logo" className="h-7" />
           </div>
           <nav>
             <button 
