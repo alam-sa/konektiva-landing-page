@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section className="py-20 bg-gray-custom" id="kontak">
       <div className="container">
-        <h2 className="text-base font-bold uppercase mb-4 flex items-center gap-3 w-fit mx-auto md:mx-0">
+        <h2 className="text-base font-bold uppercase mb-4 flex items-start gap-3 w-fit">
           <span className="w-4 h-4 bg-primary rounded-full"></span>
           Kontak
         </h2>
