@@ -10,13 +10,13 @@ const Products = () => {
   return (
     <section className="py-20 bg-[url('/src/assets/images/product-background.png')] bg-cover bg-center text-white" id="produk">
       <div className="container">
-        <h2 className="text-base font-bold uppercase mb-4 flex items-center gap-3 w-fit mx-auto md:mx-0">
+        <h2 className="text-base font-bold uppercase mb-4 flex items-center gap-3 w-fit">
           <span className="w-4 h-4 bg-primary rounded-full"></span>
           Produk Kami
         </h2>
         
         <div className="flex flex-col lg:flex-row justify-between items-end gap-8 md:gap-12 lg:gap-16 mb-8 md:mb-12 lg:mb-16">
-          <h3 className="w-full lg:w-1/2 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight whitespace-pre-line text-center lg:text-left">
+          <h3 className="w-full lg:w-1/2 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight whitespace-pre-line text-left">
             Produk IT untuk Semua
             Kebutuhan Digital Anda.
           </h3>
