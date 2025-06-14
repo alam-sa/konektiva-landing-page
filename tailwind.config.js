@@ -13,6 +13,7 @@ export default {
         'text-secondary': '#586068',
         gray: {
           konektiva: '#D7DDE9',
+          custom: '#F4F4F4',
         },
       },
       fontFamily: {
