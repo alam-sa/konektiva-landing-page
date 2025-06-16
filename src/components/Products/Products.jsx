@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import AnimateOnScroll from '../AnimateOnScroll';
 import avatar1 from '../../assets/images/man.jpg';
 
 const Products = () => {
@@ -10,22 +11,29 @@ const Products = () => {
   return (
     <section className="py-20 bg-[url('/src/assets/images/product-background.png')] bg-cover bg-center text-white" id="produk">
       <div className="container">
-        <h2 className="text-base font-bold uppercase mb-4 flex items-center gap-3 w-fit">
-          <span className="w-4 h-4 bg-primary rounded-full"></span>
-          Produk Kami
-        </h2>
+        <AnimateOnScroll>
+          <h2 className="text-base font-bold uppercase mb-4 flex items-center gap-3 w-fit">
+            <span className="w-4 h-4 bg-primary rounded-full"></span>
+            Produk Kami
+          </h2>
+        </AnimateOnScroll>
         
         <div className="flex flex-col lg:flex-row justify-between items-end gap-8 md:gap-12 lg:gap-16 mb-8 md:mb-12 lg:mb-16">
-          <h3 className="w-full lg:w-1/2 text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight whitespace-pre-line text-left">
-            Produk IT untuk Semua
-            Kebutuhan Digital Anda.
-          </h3>
-          <span className="w-full lg:w-1/2 block w-20 h-0.5 bg-gray-custom/50 mx-auto lg:mx-0"></span>
+          <AnimateOnScroll delay={100} className="w-full lg:w-1/2">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight whitespace-pre-line text-left">
+              Produk IT untuk Semua
+              Kebutuhan Digital Anda.
+            </h3>
+          </AnimateOnScroll>
+          <AnimateOnScroll delay={150} className="w-full lg:w-1/2 flex items-center">
+            <div className="w-full h-0.5 bg-white/50 ml-4"></div>
+          </AnimateOnScroll>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
           {/* Dedicated Premium */}
-          <div className="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-[20px] shadow-lg">
+          <AnimateOnScroll delay={100}>
+            <div className="h-full bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
             <h4 className="text-xl md:text-2xl font-semibold mb-2">01.</h4>
             <h4 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6">Dedicated Premium</h4>
             <ul className="space-y-3 md:space-y-4 text-white/80 text-sm md:text-base">
@@ -46,10 +54,12 @@ const Products = () => {
                 <span>Support perangkat sesuai kebutuhan bisnis anda</span>
               </li>
             </ul>
-          </div>
+            </div>
+          </AnimateOnScroll>
           
           {/* Manage Service */}
-          <div className="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-[20px] shadow-lg">
+          <AnimateOnScroll delay={150}>
+            <div className="h-full bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
             <h4 className="text-xl md:text-2xl font-semibold mb-2">02.</h4>
             <h4 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6">Manage Service</h4>
             <ul className="space-y-3 md:space-y-4 text-white/80 text-sm md:text-base">
@@ -66,10 +76,12 @@ const Products = () => {
                 <span>Biaya Terjangkau</span>
               </li>
             </ul>
-          </div>
+            </div>
+          </AnimateOnScroll>
           
           {/* IT Consultant */}
-          <div className="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-[20px] shadow-lg">
+          <AnimateOnScroll delay={200}>
+            <div className="h-full bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
             <h4 className="text-xl md:text-2xl font-semibold mb-2">03.</h4>
             <h4 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6">IT Consultant</h4>
             <ul className="space-y-3 md:space-y-4 text-white/80 text-sm md:text-base">
@@ -86,10 +98,12 @@ const Products = () => {
                 <span>Rekomendasi tentang infrastruktur dan masalah IT anda.</span>
               </li>
             </ul>
-          </div>
+            </div>
+          </AnimateOnScroll>
         </div>
         
-        <div className="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-[20px] shadow-lg">
+        <AnimateOnScroll delay={100}>
+          <div className="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
           <div className="flex flex-col md:flex-col lg:flex-row items-center justify-between gap-6">
             <div className="flex flex-col md:flex-col lg:flex-row items-center gap-4 md:gap-8 w-full md:w-auto">
               <div className="flex -space-x-4">
@@ -115,6 +129,7 @@ const Products = () => {
             </div>
           </div>
         </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );

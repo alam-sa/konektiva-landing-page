@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Animation classes */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 700ms;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.translate-y-8 {
+  transform: translateY(2rem);
+}
+
+.translate-y-0 {
+  transform: translateY(0);
+}
+
 :root {
   --primary: #2563eb;
   --primary-dark: #1d4ed8;
@@ -65,5 +88,14 @@
   
   .card {
     @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+  
+  /* Animation for scroll-triggered elements */
+  .animate-fadeIn {
+    @apply opacity-0 translate-y-8 transition-all;
+  }
+  
+  .animate-fadeIn.visible {
+    @apply opacity-100 translate-y-0;
   }
 }
