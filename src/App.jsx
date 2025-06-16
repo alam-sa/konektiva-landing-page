@@ -4,6 +4,7 @@ import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Services from './components/Services/Services';
 import Products from './components/Products/Products';
+import InternetConnection from './components/InternetConnection/InternetConnection';
 import Clients from './components/Clients/Clients';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
@@ -17,6 +18,7 @@ function App() {
         <About />
         <Services />
         <Products />
+        <InternetConnection />
         <Clients />
         <Contact />
       </main>

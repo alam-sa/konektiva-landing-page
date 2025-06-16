@@ -1,159 +1,85 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import AnimateOnScroll from '../AnimateOnScroll';
+import FAQItem from './FAQItem';
+
+import { useInView } from 'react-intersection-observer';
 
 const Contact = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
-    <section className="py-20 bg-gray-custom overflow-hidden" id="kontak">
-      <div className="container">
-        <AnimateOnScroll>
-          <h2 className="text-base font-bold uppercase mb-4 flex items-start gap-3 w-fit">
-            <span className="w-4 h-4 bg-primary rounded-full"></span>
-            Kontak
-          </h2>
-        </AnimateOnScroll>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 xl:gap-32">
-          {/* Left Column - Text Content */}
-          <div className="flex flex-col">
+    <section 
+      ref={ref}
+      className={`py-20 bg-white overflow-hidden transition-all duration-1000 ease-in-out ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} 
+      id="kontak"
+    >
+      <div className="container">        
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
+          {/* FAQ Section - Takes 8 columns */}
+          <div className="lg:col-span-7">
             <AnimateOnScroll delay={100}>
-              <div className="mb-12">
-                <h3 className="text-2xl md:text-3xl font-semibold text-text-primary mb-4">Hubungi Kami</h3>
-                <p className="text-text-secondary">
-                  Mari berdiskusi dan temukan solusi terbaik untuk kebutuhan Anda. 
-                  Kami siap mendampingi setiap langkah Anda.
-                </p>
+              <div>
+                <h3 className="text-2xl md:text-3xl font-semibold text-text-primary mb-6">Paling Sering ditanyakan</h3>
+                
               </div>
             </AnimateOnScroll>
             
-            <div className="space-y-4 w-full">
-              {/* Address */}
-              <AnimateOnScroll delay={200}>
-                <div className="bg-white p-6 rounded-[20px] shadow-lg">
-                  <div className="flex gap-4">
-                    <div className="mt-1">
-                      <FontAwesomeIcon icon={faMapMarkerAlt} className="text-primary text-xl" />
-                    </div>
-                    <div>
-                      <h4 className="text-text-primary font-medium mb-1">Alamat</h4>
-                      <p className="text-text-secondary text-sm">
-                        Kompleks Sekumpul Hill, Unit 03<br />
-                        Jl. P. Suryanata RT 14-15 Kel. Bukit Pinang<br />
-                        Kec. Samarinda Ulu, 75131
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </AnimateOnScroll>
-              
-              {/* Contact Details */}
-              <div className="flex flex-col lg:flex-row gap-4 w-full">
-                {/* Email */}
-                <AnimateOnScroll delay={300} className="flex-1">
-                  <div className="bg-white p-6 rounded-[20px] shadow-lg">
-                    <div className="flex gap-4">
-                      <div className="mt-1">
-                        <FontAwesomeIcon icon={faEnvelope} className="text-primary text-xl" />
-                      </div>
-                      <div>
-                        <h4 className="text-text-primary font-medium mb-1">Email</h4>
-                        <p className="text-text-secondary text-sm">support@kaltimnet.com</p>
-                      </div>
-                    </div>
-                  </div>
-                </AnimateOnScroll>
-                
-                {/* Phone */}
-                <AnimateOnScroll delay={400} className="flex-1">
-                  <div className="bg-white p-6 rounded-[20px] shadow-lg">
-                    <div className="flex gap-4">
-                      <div className="mt-1">
-                        <FontAwesomeIcon icon={faPhone} className="text-primary text-xl" />
-                      </div>
-                      <div>
-                        <h4 className="text-text-primary font-medium mb-1">Telepon</h4>
-                        <p className="text-text-secondary text-sm">+62 851-5715-7760</p>
-                      </div>
-                    </div>
-                  </div>
-                </AnimateOnScroll>
-              </div>
+            <div className="space-y-2">
+              <FAQItem 
+                question="Apa saja layanan yang disediakan?"
+                answer="Kami menyediakan layanan internet berkecepatan tinggi, solusi IT untuk bisnis, pengembangan website, dan layanan konsultasi teknologi."
+              />
+              <FAQItem 
+                question="Bagaimana cara berlangganan layanan?"
+                answer="Anda dapat menghubungi tim penjualan kami melalui telepon, email, atau mengisi formulir kontak di website ini."
+              />
+              <FAQItem 
+                question="Berapa lama proses instalasi?"
+                answer="Proses instalasi biasanya memakan waktu 2-3 hari kerja setelah proses verifikasi data selesai."
+              />
+              <FAQItem 
+                question="Apa metode pembayaran yang tersedia?"
+                answer="Kami menerima pembayaran melalui transfer bank, virtual account, dan berbagai metode pembayaran digital lainnya."
+              />
+              <FAQItem 
+                question="Bagaimana jika terjadi gangguan layanan?"
+                answer="Tim teknis kami siap membantu 24/7. Segera hubungi layanan pelanggan kami untuk mendapatkan bantuan."
+              />
             </div>
           </div>
           
-          {/* Right Column - Form */}
-          <AnimateOnScroll delay={100} className="w-full">
-            <div className="bg-white p-8 rounded-[20px] shadow-lg h-full w-full max-w-[600px] mx-auto">
-              <form className="space-y-8">
-              <div className="mb-4">
-                <label htmlFor="name" className="block text-sm font-medium text-text-secondary mb-1.5">
-                  Nama Lengkap
-                </label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  placeholder="Nama Anda" 
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
-                />
-              </div>
-              
-              <div className="space-y-8">
-                <div className="mb-4">
-                  <label htmlFor="email" className="block text-sm font-medium text-text-secondary mb-1.5">
-                    Email
-                  </label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    placeholder="email@contoh.com" 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
-                  />
+          {/* Contact Card - Takes 5 columns */}
+          <AnimateOnScroll delay={200} className="w-full lg:col-span-5">
+            <div className="relative flex flex-col items-start p-6 md:p-8 gap-6 bg-[#F4FCFC] w-full max-w-[535px] mx-auto">
+              {/* Outer frame */}
+              <div className="flex flex-col items-start gap-6 w-full">
+                {/* Inner frame for title and description */}
+                <div className="flex flex-col items-start gap-4 w-full max-w-[327px]">
+                  <h2 className="text-base font-bold uppercase flex items-center gap-3 w-full">
+                    <span className="w-4 h-4 bg-primary rounded-full flex-shrink-0"></span>
+                    Kontak
+                  </h2>
+                  <h3 className="text-3xl md:text-4xl leading-tight font-semibold">Hubungi Kami</h3>
+                  <p className="text-text-secondary text-sm md:text-base">
+                    Mari berdiskusi dan temukan solusi terbaik untuk kebutuhan Anda. Kami siap mendampingi setiap langkah Anda.
+                  </p>
                 </div>
-                
-                <div className="mb-4">
-                  <label htmlFor="phone" className="block text-sm font-medium text-text-secondary mb-1.5">
-                    Nomor Telepon
-                  </label>
-                  <input 
-                    type="tel" 
-                    id="phone" 
-                    placeholder="+62 812-3456-7890" 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
-                  />
-                </div>
+
+                {/* Button */}
+                <button className="flex items-center justify-center w-full md:w-[280px] px-4 py-2 bg-primary text-white font-medium text-base leading-6 rounded-[20px] hover:bg-primary-dark transition-colors">
+                  Layanan Customer Service
+                </button>
               </div>
-              
-              <div className="mb-4">
-                <label htmlFor="message" className="block text-sm font-medium text-text-secondary mb-1.5">
-                  Pesan
-                </label>
-                <textarea 
-                  id="message" 
-                  rows="4" 
-                  placeholder="Tulis pesan Anda di sini..." 
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
-                ></textarea>
+
+              {/* Decorative image */}
+              <div className="hidden md:block absolute w-[180px] md:w-[215px] h-[270px] md:h-[322px] aspect-[215/322] right-[-20px] md:right-[-10px] bottom-0">
+                <img src="/src/assets/images/customer-service.png" alt="Decoration" className="w-full h-full object-cover" />
               </div>
-              
-              <div className="flex items-start gap-3 mb-6">
-                <input 
-                  type="checkbox" 
-                  id="privacy" 
-                  className="mt-1 w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded"
-                />
-                <label htmlFor="privacy" className="text-sm text-text-secondary">
-                  Saya menyetujui kebijakan privasi
-                </label>
-              </div>
-              
-              <button 
-                type="submit" 
-                className="w-full bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition duration-300"
-              >
-                Kirim Pesan
-              </button>
-              </form>
             </div>
           </AnimateOnScroll>
         </div>
