@@ -24,10 +24,10 @@ const About = () => {
           </AnimateOnScroll>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 h-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {/* High Integrity Card */}
           <AnimateOnScroll delay={100} className="md:col-span-1 md:row-span-2">
-            <div className="card bg-[url('/src/assets/images/high-integrity.png')] bg-cover bg-center rounded-[20px] p-8 text-white relative overflow-hidden h-[515px] md:h-full flex flex-col" style={{minHeight: '515px'}}>
+            <div className="card bg-[url('/src/assets/images/high-integrity.png')] bg-cover bg-center rounded-[20px] p-8 text-white relative overflow-hidden h-full flex flex-col" style={{ minHeight: '515px' }}>
             <div className="relative z-10">
               <h4 className="text-2xl font-medium mb-3">High Integrity</h4>
               <p className="text-base leading-relaxed">
@@ -40,7 +40,7 @@ const About = () => {
           {/* Team Work Card */}
           <div className="flex flex-col gap-5 md:col-span-1 md:row-span-2">
             <AnimateOnScroll delay={150} className="h-full">
-              <div className="card bg-[url('/src/assets/images/team-work.png')] bg-cover bg-center rounded-[20px] p-8 text-white relative overflow-hidden h-[337px] md:h-[60%] flex flex-col" style={{minHeight: '337px'}}>
+              <div className="card bg-[url('/src/assets/images/team-work.png')] bg-cover bg-center rounded-[20px] p-8 text-white relative overflow-hidden h-full flex flex-col" style={{ minHeight: '337px' }}>
               <div className="relative z-10 flex flex-col justify-end h-full">
                 <h4 className="text-2xl font-medium mb-3">Team Work</h4>
                 <p className="text-base leading-relaxed">
@@ -52,7 +52,7 @@ const About = () => {
             
             {/* Fearless Card */}
             <AnimateOnScroll delay={200} className="h-full">
-              <div className="card bg-[url('/src/assets/images/fearless.png')] bg-cover bg-center rounded-[20px] p-8 text-white relative overflow-hidden h-[159px] md:h-[40%] flex flex-col" style={{minHeight: '159px'}}>
+              <div className="card bg-[url('/src/assets/images/fearless.png')] bg-cover bg-center rounded-[20px] p-8 text-white relative overflow-hidden h-full flex flex-col" style={{ minHeight: '159px' }}>
                 <div className="relative z-10">
                   <h4 className="text-2xl font-medium mb-3">Fearless</h4>
                   <p className="text-base leading-relaxed">
@@ -66,7 +66,7 @@ const About = () => {
           {/* Excellent Service & Smart Working Cards */}
           <div className="flex flex-col gap-5 md:col-span-1 md:row-span-2">
             <AnimateOnScroll delay={150} className="h-full">
-              <div className="card bg-[url('/src/assets/images/excellent-service.png')] bg-cover bg-center rounded-[20px] p-8 text-white relative overflow-hidden h-[236px] md:h-[55%] flex flex-col" style={{minHeight: '236px'}}>
+              <div className="card bg-[url('/src/assets/images/excellent-service.png')] bg-cover bg-center rounded-[20px] p-8 text-white relative overflow-hidden h-full flex flex-col" style={{ minHeight: '236px' }}>
               <div className="relative z-10">
                 <h4 className="text-2xl font-medium mb-3">Excellent Service</h4>
                 <p className="text-base leading-relaxed">
@@ -77,7 +77,7 @@ const About = () => {
             </AnimateOnScroll>
             
             <AnimateOnScroll delay={200} className="h-full">
-              <div className="card bg-[url('/src/assets/images/smart-working.png')] bg-cover bg-top rounded-[20px] p-8 text-white relative overflow-hidden h-[259px] md:h-[45%] flex flex-col" style={{minHeight: '259px'}}>
+              <div className="card bg-[url('/src/assets/images/smart-working.png')] bg-cover bg-top rounded-[20px] p-8 text-white relative overflow-hidden h-full flex flex-col" style={{ minHeight: '259px' }}>
                 <div className="relative z-10 flex flex-col justify-end h-full">
                   <h4 className="text-2xl font-medium mb-3">Smart Working</h4>
                   <p className="text-base leading-relaxed">
