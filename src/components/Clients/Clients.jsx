@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimateOnScroll from '../AnimateOnScroll';
 import client1 from '../../assets/images/client-1.png';
 import client2 from '../../assets/images/client-2.png';
 import client3 from '../../assets/images/client-3.png';
@@ -31,13 +32,17 @@ const Clients = () => {
     <section className="py-16 bg-white" id="klien">
       <div className="container px-4">
         <div className="text-center mb-12">
-          <h2 className="text-base font-bold uppercase mb-4 flex items-center gap-3 w-fit mx-auto">
-            <span className="w-4 h-4 bg-primary rounded-full"></span>
-            Klien Kami
-          </h2>
-          <h3 className="text-2xl font-medium text-text-primary mb-4">
-          Dipercaya oleh berbagai klien dari berbagai industri untuk solusi internet dan IT terbaik
-          </h3>
+          <AnimateOnScroll>
+            <h2 className="text-base font-bold uppercase mb-4 flex items-center gap-3 w-fit mx-auto">
+              <span className="w-4 h-4 bg-primary rounded-full"></span>
+              Klien Kami
+            </h2>
+          </AnimateOnScroll>
+          <AnimateOnScroll delay={100}>
+            <h3 className="text-2xl font-medium text-text-primary mb-4">
+              Dipercaya oleh berbagai klien dari berbagai industri untuk solusi internet dan IT terbaik
+            </h3>
+          </AnimateOnScroll>
         </div>
   
         {/* Client Logos Grid */}
@@ -45,30 +50,34 @@ const Clients = () => {
           {/* First Row */}
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 mb-12">
             {firstRow.map((logo, index) => (
-              <div key={index} className="flex-shrink-0">
-                <div className="px-5 py-3">
-                  <img 
-                    src={logo.src} 
-                    alt={logo.alt}
-                    className="h-22 w-auto max-w-[200px] object-contain"
-                  />
+              <AnimateOnScroll key={index} delay={100 + (index * 50)}>
+                <div className="flex-shrink-0">
+                  <div className="px-5 py-3">
+                    <img 
+                      src={logo.src} 
+                      alt={logo.alt}
+                      className="h-22 w-auto max-w-[200px] object-contain opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300"
+                    />
+                  </div>
                 </div>
-              </div>
+              </AnimateOnScroll>
             ))}
           </div>
           
           {/* Second Row */}
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
             {secondRow.map((logo, index) => (
-              <div key={index} className="flex-shrink-0">
-                <div className="px-5 py-3">
-                  <img 
-                    src={logo.src} 
-                    alt={logo.alt}
-                    className="h-22 w-auto max-w-[200px] object-contain"
-                  />
+              <AnimateOnScroll key={index} delay={150 + (index * 50)}>
+                <div className="flex-shrink-0">
+                  <div className="px-5 py-3">
+                    <img 
+                      src={logo.src} 
+                      alt={logo.alt}
+                      className="h-22 w-auto max-w-[200px] object-contain opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300"
+                    />
+                  </div>
                 </div>
-              </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>

@@ -1,79 +1,91 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import AnimateOnScroll from '../AnimateOnScroll';
 
 const Contact = () => {
   return (
-    <section className="py-20 bg-gray-custom" id="kontak">
+    <section className="py-20 bg-gray-custom overflow-hidden" id="kontak">
       <div className="container">
-        <h2 className="text-base font-bold uppercase mb-4 flex items-start gap-3 w-fit">
-          <span className="w-4 h-4 bg-primary rounded-full"></span>
-          Kontak
-        </h2>
+        <AnimateOnScroll>
+          <h2 className="text-base font-bold uppercase mb-4 flex items-start gap-3 w-fit">
+            <span className="w-4 h-4 bg-primary rounded-full"></span>
+            Kontak
+          </h2>
+        </AnimateOnScroll>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 xl:gap-32">
           {/* Left Column - Text Content */}
           <div className="flex flex-col">
-            <div className="mb-12">
-              <h3 className="text-2xl md:text-3xl font-semibold text-text-primary mb-4">Hubungi Kami</h3>
-              <p className="text-text-secondary">
-                Mari berdiskusi dan temukan solusi terbaik untuk kebutuhan Anda. 
-                Kami siap mendampingi setiap langkah Anda.
-              </p>
-            </div>
+            <AnimateOnScroll delay={100}>
+              <div className="mb-12">
+                <h3 className="text-2xl md:text-3xl font-semibold text-text-primary mb-4">Hubungi Kami</h3>
+                <p className="text-text-secondary">
+                  Mari berdiskusi dan temukan solusi terbaik untuk kebutuhan Anda. 
+                  Kami siap mendampingi setiap langkah Anda.
+                </p>
+              </div>
+            </AnimateOnScroll>
             
             <div className="space-y-4 w-full">
               {/* Address */}
-              <div className="bg-white p-6 rounded-[20px] shadow-lg">
-                <div className="flex gap-4">
-                  <div className="mt-1">
-                    <FontAwesomeIcon icon={faMapMarkerAlt} className="text-primary text-xl" />
-                  </div>
-                  <div>
-                    <h4 className="text-text-primary font-medium mb-1">Alamat</h4>
-                    <p className="text-text-secondary text-sm">
-                      Kompleks Sekumpul Hill, Unit 03<br />
-                      Jl. P. Suryanata RT 14-15 Kel. Bukit Pinang<br />
-                      Kec. Samarinda Ulu, 75131
-                    </p>
+              <AnimateOnScroll delay={200}>
+                <div className="bg-white p-6 rounded-[20px] shadow-lg">
+                  <div className="flex gap-4">
+                    <div className="mt-1">
+                      <FontAwesomeIcon icon={faMapMarkerAlt} className="text-primary text-xl" />
+                    </div>
+                    <div>
+                      <h4 className="text-text-primary font-medium mb-1">Alamat</h4>
+                      <p className="text-text-secondary text-sm">
+                        Kompleks Sekumpul Hill, Unit 03<br />
+                        Jl. P. Suryanata RT 14-15 Kel. Bukit Pinang<br />
+                        Kec. Samarinda Ulu, 75131
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </AnimateOnScroll>
               
               {/* Contact Details */}
               <div className="flex flex-col lg:flex-row gap-4 w-full">
                 {/* Email */}
-                <div className="bg-white p-6 rounded-[20px] shadow-lg flex-1">
-                  <div className="flex gap-4">
-                    <div className="mt-1">
-                      <FontAwesomeIcon icon={faEnvelope} className="text-primary text-xl" />
-                    </div>
-                    <div>
-                      <h4 className="text-text-primary font-medium mb-1">Email</h4>
-                      <p className="text-text-secondary text-sm">support@kaltimnet.com</p>
+                <AnimateOnScroll delay={300} className="flex-1">
+                  <div className="bg-white p-6 rounded-[20px] shadow-lg">
+                    <div className="flex gap-4">
+                      <div className="mt-1">
+                        <FontAwesomeIcon icon={faEnvelope} className="text-primary text-xl" />
+                      </div>
+                      <div>
+                        <h4 className="text-text-primary font-medium mb-1">Email</h4>
+                        <p className="text-text-secondary text-sm">support@kaltimnet.com</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </AnimateOnScroll>
                 
                 {/* Phone */}
-                <div className="bg-white p-6 rounded-[20px] shadow-lg flex-1">
-                  <div className="flex gap-4">
-                    <div className="mt-1">
-                      <FontAwesomeIcon icon={faPhone} className="text-primary text-xl" />
-                    </div>
-                    <div>
-                      <h4 className="text-text-primary font-medium mb-1">Telepon</h4>
-                      <p className="text-text-secondary text-sm">+62 851-5715-7760</p>
+                <AnimateOnScroll delay={400} className="flex-1">
+                  <div className="bg-white p-6 rounded-[20px] shadow-lg">
+                    <div className="flex gap-4">
+                      <div className="mt-1">
+                        <FontAwesomeIcon icon={faPhone} className="text-primary text-xl" />
+                      </div>
+                      <div>
+                        <h4 className="text-text-primary font-medium mb-1">Telepon</h4>
+                        <p className="text-text-secondary text-sm">+62 851-5715-7760</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </AnimateOnScroll>
               </div>
             </div>
           </div>
           
           {/* Right Column - Form */}
-          <div className="bg-white p-8 rounded-[20px] shadow-lg h-full w-full max-w-[600px] mx-auto">
-            <form className="space-y-8">
+          <AnimateOnScroll delay={100} className="w-full">
+            <div className="bg-white p-8 rounded-[20px] shadow-lg h-full w-full max-w-[600px] mx-auto">
+              <form className="space-y-8">
               <div className="mb-4">
                 <label htmlFor="name" className="block text-sm font-medium text-text-secondary mb-1.5">
                   Nama Lengkap
@@ -141,8 +153,9 @@ const Contact = () => {
               >
                 Kirim Pesan
               </button>
-            </form>
-          </div>
+              </form>
+            </div>
+          </AnimateOnScroll>
         </div>
       </div>
     </section>
