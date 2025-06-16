@@ -24,7 +24,7 @@ const Footer = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Address */}
               <div className="flex gap-4 items-start">
-                <i className="fas fa-location-dot text-primary text-xl mt-1 flex-shrink-0"></i>
+                <FontAwesomeIcon icon={faMapMarkerAlt} className="text-primary text-xl mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-konektiva font-medium text-sm uppercase tracking-wider mb-1">ALAMAT</p>
                   <p className="text-white text-base font-normal leading-6">
