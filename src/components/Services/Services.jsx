@@ -1,11 +1,12 @@
 import React from 'react';
 import AnimateOnScroll from '../AnimateOnScroll';
-import networkIcon from '../../assets/icons/network.svg';
-import servicesIcon from '../../assets/icons/services.svg';
-import consultationIcon from '../../assets/icons/consultation.svg';
-import vectorIcon from '../../assets/icons/vector.svg';
-import domainIcon from '../../assets/icons/domain.svg';
-import mobileIcon from '../../assets/icons/mobile-apps.svg';
+import Lottie from 'lottie-react';
+import internetAnimation from '../../assets/json/internet_18994922.json';
+import servicesAnimation from '../../assets/json/services_16766957.json';
+import consultationAnimation from '../../assets/json/consultation_10690276.json';
+import designAnimation from '../../assets/json/vector_8800707.json';
+import webAnimation from '../../assets/json/domain_14447789.json';
+import mobileAnimation from '../../assets/json/mobile-apps_14447489.json';
 
 const Services = () => {
   return (
@@ -31,7 +32,9 @@ const Services = () => {
           {/* Internet Connection */}
           <AnimateOnScroll delay={100}>
             <div className="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center transform hover:-translate-y-1">
-            <img src={networkIcon} alt="Internet Connection" className="w-12 md:w-16 h-12 md:h-16 mb-4 md:mb-6" />
+            <div className="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-6">
+              <Lottie animationData={internetAnimation} loop={true} />
+            </div>
             <h4 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Internet Connection</h4>
             <p className="text-text-secondary text-sm md:text-base">
               Rasakan pengalaman internet terbaik dengan kecepatan tinggi dan koneksi stabil melalui layanan unggulan kami.
@@ -42,7 +45,9 @@ const Services = () => {
           {/* Manage Service */}
           <AnimateOnScroll delay={150}>
             <div className="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center transform hover:-translate-y-1">
-            <img src={servicesIcon} alt="Manage Service" className="w-12 md:w-16 h-12 md:h-16 mb-4 md:mb-6" />
+            <div className="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-6">
+              <Lottie animationData={servicesAnimation} loop={true} />
+            </div>
             <h4 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Manage Service</h4>
             <p className="text-text-secondary text-sm md:text-base">
               Optimalkan operasional bisnis Anda dengan layanan managed service yang andal dan tepercaya dari Konektiva.
@@ -53,7 +58,9 @@ const Services = () => {
           {/* IT Consultant */}
           <AnimateOnScroll delay={200}>
             <div className="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center transform hover:-translate-y-1">
-            <img src={consultationIcon} alt="IT Consultant" className="w-12 md:w-16 h-12 md:h-16 mb-4 md:mb-6" />
+            <div className="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-6">
+              <Lottie animationData={consultationAnimation} loop={true} />
+            </div>
             <h4 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">IT Consultant</h4>
             <p className="text-text-secondary text-sm md:text-base">
               Dapatkan solusi IT terbaik melalui layanan konsultasi profesional dari tim ahli kami.
@@ -64,7 +71,9 @@ const Services = () => {
           {/* Design Graphic */}
           <AnimateOnScroll delay={100}>
             <div className="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center transform hover:-translate-y-1">
-            <img src={vectorIcon} alt="Design Graphic" className="w-12 md:w-16 h-12 md:h-16 mb-4 md:mb-6" />
+            <div className="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-6">
+              <Lottie animationData={designAnimation} loop={true} />
+            </div>
             <h4 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Design Graphic</h4>
             <p className="text-text-secondary text-sm md:text-base">
               Desain grafis profesional untuk mendukung ide dan identitas visual Anda
@@ -75,7 +84,9 @@ const Services = () => {
           {/* Web Development */}
           <AnimateOnScroll delay={150}>
             <div className="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center transform hover:-translate-y-1">
-            <img src={domainIcon} alt="Web Development" className="w-12 md:w-16 h-12 md:h-16 mb-4 md:mb-6" />
+            <div className="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-6">
+              <Lottie animationData={webAnimation} loop={true} />
+            </div>
             <h4 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Web Development</h4>
             <p className="text-text-secondary text-sm md:text-base">
               Dapatkan website profesional yang responsif, menarik, dan siap mendukung kebutuhan digital bisnis Anda
@@ -86,7 +97,9 @@ const Services = () => {
           {/* Mobile Development */}
           <AnimateOnScroll delay={200}>
             <div className="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center transform hover:-translate-y-1">
-            <img src={mobileIcon} alt="Mobile Development" className="w-12 md:w-16 h-12 md:h-16 mb-4 md:mb-6" />
+            <div className="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-6">
+              <Lottie animationData={mobileAnimation} loop={true} />
+            </div>
             <h4 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Mobile Development</h4>
             <p className="text-text-secondary text-sm md:text-base">
               Dapatkan aplikasi mobile inovatif dan user-friendly melalui layanan pengembangan mobile terbaik dari kami.
