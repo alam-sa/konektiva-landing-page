@@ -78,7 +78,6 @@ const Contact = () => {
 
               {/* Decorative image */}
               <div className="hidden md:block absolute w-[180px] md:w-[215px] h-[270px] md:h-[322px] aspect-[215/322] right-[-20px] md:right-[-10px] bottom-0">
-                {/* This would be your image component */}
                 <img src="/src/assets/images/customer-service.png" alt="Decoration" className="w-full h-full object-cover" />
               </div>
             </div>
