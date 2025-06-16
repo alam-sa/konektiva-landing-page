@@ -8,6 +8,57 @@ import designAnimation from '../../assets/json/vector_8800707.json';
 import webAnimation from '../../assets/json/domain_14447789.json';
 import mobileAnimation from '../../assets/json/mobile-apps_14447489.json';
 
+const services = [
+  {
+    title: "Internet Connection",
+    description: "Rasakan pengalaman internet terbaik dengan kecepatan tinggi dan koneksi stabil melalui layanan unggulan kami.",
+    animation: internetAnimation
+  },
+  {
+    title: "Manage Service",
+    description: "Optimalkan operasional bisnis Anda dengan layanan managed service yang andal dan tepercaya dari Konektiva.",
+    animation: servicesAnimation
+  },
+  {
+    title: "IT Consultant",
+    description: "Dapatkan solusi IT terbaik melalui layanan konsultasi profesional dari tim ahli kami.",
+    animation: consultationAnimation
+  },
+  {
+    title: "Design Graphic",
+    description: "Desain grafis profesional untuk mendukung ide dan identitas visual Anda",
+    animation: designAnimation
+  },
+  {
+    title: "Web Development",
+    description: "Dapatkan website profesional yang responsif, menarik, dan siap mendukung kebutuhan digital bisnis Anda",
+    animation: webAnimation
+  },
+  {
+    title: "Mobile Development",
+    description: "Dapatkan aplikasi mobile inovatif dan user-friendly melalui layanan pengembangan mobile terbaik dari kami.",
+    animation: mobileAnimation
+  }
+];
+
+const ServiceCard = ({ title, description, animation, delay }) => (
+  <AnimateOnScroll delay={delay}>
+    <div className="h-full">
+      <div className="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center h-full transform hover:-translate-y-1">
+        <div className="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-6">
+          <Lottie animationData={animation} loop={true} />
+        </div>
+        <h4 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">{title}</h4>
+        <div className="flex-1 flex items-center">
+          <p className="text-text-secondary text-sm md:text-base">
+            {description}
+          </p>
+        </div>
+      </div>
+    </div>
+  </AnimateOnScroll>
+);
+
 const Services = () => {
   return (
     <section className="py-20 bg-gray-custom" id="layanan">
@@ -29,83 +80,15 @@ const Services = () => {
         </AnimateOnScroll>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {/* Internet Connection */}
-          <AnimateOnScroll delay={100}>
-            <div className="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center transform hover:-translate-y-1">
-            <div className="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-6">
-              <Lottie animationData={internetAnimation} loop={true} />
-            </div>
-            <h4 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Internet Connection</h4>
-            <p className="text-text-secondary text-sm md:text-base">
-              Rasakan pengalaman internet terbaik dengan kecepatan tinggi dan koneksi stabil melalui layanan unggulan kami.
-            </p>
-            </div>
-          </AnimateOnScroll>
-          
-          {/* Manage Service */}
-          <AnimateOnScroll delay={150}>
-            <div className="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center transform hover:-translate-y-1">
-            <div className="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-6">
-              <Lottie animationData={servicesAnimation} loop={true} />
-            </div>
-            <h4 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Manage Service</h4>
-            <p className="text-text-secondary text-sm md:text-base">
-              Optimalkan operasional bisnis Anda dengan layanan managed service yang andal dan tepercaya dari Konektiva.
-            </p>
-            </div>
-          </AnimateOnScroll>
-          
-          {/* IT Consultant */}
-          <AnimateOnScroll delay={200}>
-            <div className="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center transform hover:-translate-y-1">
-            <div className="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-6">
-              <Lottie animationData={consultationAnimation} loop={true} />
-            </div>
-            <h4 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">IT Consultant</h4>
-            <p className="text-text-secondary text-sm md:text-base">
-              Dapatkan solusi IT terbaik melalui layanan konsultasi profesional dari tim ahli kami.
-            </p>
-            </div>
-          </AnimateOnScroll>
-          
-          {/* Design Graphic */}
-          <AnimateOnScroll delay={100}>
-            <div className="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center transform hover:-translate-y-1">
-            <div className="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-6">
-              <Lottie animationData={designAnimation} loop={true} />
-            </div>
-            <h4 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Design Graphic</h4>
-            <p className="text-text-secondary text-sm md:text-base">
-              Desain grafis profesional untuk mendukung ide dan identitas visual Anda
-            </p>
-            </div>
-          </AnimateOnScroll>
-          
-          {/* Web Development */}
-          <AnimateOnScroll delay={150}>
-            <div className="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center transform hover:-translate-y-1">
-            <div className="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-6">
-              <Lottie animationData={webAnimation} loop={true} />
-            </div>
-            <h4 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Web Development</h4>
-            <p className="text-text-secondary text-sm md:text-base">
-              Dapatkan website profesional yang responsif, menarik, dan siap mendukung kebutuhan digital bisnis Anda
-            </p>
-            </div>
-          </AnimateOnScroll>
-          
-          {/* Mobile Development */}
-          <AnimateOnScroll delay={200}>
-            <div className="bg-white p-6 md:p-8 rounded-[20px] shadow-lg hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center transform hover:-translate-y-1">
-            <div className="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-6">
-              <Lottie animationData={mobileAnimation} loop={true} />
-            </div>
-            <h4 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Mobile Development</h4>
-            <p className="text-text-secondary text-sm md:text-base">
-              Dapatkan aplikasi mobile inovatif dan user-friendly melalui layanan pengembangan mobile terbaik dari kami.
-            </p>
-          </div>
-          </AnimateOnScroll>
+          {services.map((service, index) => (
+            <ServiceCard 
+              key={index}
+              title={service.title}
+              description={service.description}
+              animation={service.animation}
+              delay={100 + (index % 3) * 50}
+            />
+          ))}
         </div>
       </div>
     </section>
