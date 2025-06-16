@@ -5,8 +5,8 @@ import logo from '../../assets/images/logo.png';
 
 const Footer = () => {
   return (
-    <footer className="py-20 bg-[url('/src/assets/images/product-background.png')] bg-cover bg-center text-white">
-      <div className="container mx-auto px-5 max-w-6xl">
+    <footer className="w-full py-20 bg-[url('/src/assets/images/product-background.png')] bg-cover bg-center text-white">
+      <div className="container">
         {/* Logo */}
         <img src={logo} alt="Konektiva Logo" className="h-10 mb-12" />
     
@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Left Column - Paragraph */}
           <div className="lg:w-2/5">
             <p className="text-white text-base font-normal leading-6">
-              Konektiva adalah penyedia layanan internet dan solusi IT terintegrasi yang berfokus pada konektivitas andal, inovasi digital, dan layanan profesional untuk mendukung transformasi teknologi di Indonesia.
+            Konektiva adalah penyedia layanan internet dan solusi IT terintegrasi yang berfokus pada konektivitas andal, inovasi digital, dan layanan profesional untuk mendukung transformasi teknologi di Indonesia.
             </p>
           </div>
     
